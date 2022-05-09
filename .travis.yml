@@ -5,8 +5,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t indranil1981/react-test -f ./client/Dockerfile.dev ./client
-
+  - docker build -t indranil1981/react-test -f ./client/Dockerfile.dev ./client 
+ 
 script:
   - docker run -e CI=true indranil1981/react-test npm test
 
